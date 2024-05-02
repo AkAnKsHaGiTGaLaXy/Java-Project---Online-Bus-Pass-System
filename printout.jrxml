@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="printout" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="706de31e-78cc-458e-b531-58f4ef7ca417">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="76"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     student_apply_pass.`id` AS student_apply_pass_id,
+     student_apply_pass.`student_id` AS student_apply_pass_student_id,
+     student_apply_pass.`student_name` AS student_apply_pass_student_name,
+     student_apply_pass.`period` AS student_apply_pass_period,
+     student_apply_pass.`college_name` AS student_apply_pass_college_name,
+     student_apply_pass.`adhar_number` AS student_apply_pass_adhar_number,
+     student_apply_pass.`admission_reciept` AS student_apply_pass_admission_reciept,
+     student_apply_pass.`bonafide_number` AS student_apply_pass_bonafide_number,
+     student_apply_pass.`route` AS student_apply_pass_route,
+     student_apply_pass.`photo` AS student_apply_pass_photo,
+     student_apply_pass.`status` AS student_apply_pass_status,
+     student_apply_pass.`passno` AS student_apply_pass_passno
+FROM
+     `student_apply_pass` student_apply_pass
+WHERE id=$P{id};]]>
+	</queryString>
+	<field name="student_apply_pass_id" class="java.lang.Integer"/>
+	<field name="student_apply_pass_student_id" class="java.lang.Integer"/>
+	<field name="student_apply_pass_student_name" class="java.lang.String"/>
+	<field name="student_apply_pass_period" class="java.lang.String"/>
+	<field name="student_apply_pass_college_name" class="java.lang.String"/>
+	<field name="student_apply_pass_adhar_number" class="java.lang.String"/>
+	<field name="student_apply_pass_admission_reciept" class="java.lang.String"/>
+	<field name="student_apply_pass_bonafide_number" class="java.lang.String"/>
+	<field name="student_apply_pass_route" class="java.lang.String"/>
+	<field name="student_apply_pass_photo" class="java.lang.String"/>
+	<field name="student_apply_pass_status" class="java.lang.String"/>
+	<field name="student_apply_pass_passno" class="java.lang.String"/>
+	<group name="student_apply_pass_id">
+		<groupExpression><![CDATA[$F{student_apply_pass_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="333" splitType="Stretch">
+			<textField>
+				<reportElement x="164" y="20" width="122" height="20" uuid="31bcbb96-5945-4969-8dae-5c8829b99d20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="59" width="122" height="20" uuid="cd19c905-9adf-4d22-8006-4b06911a01c8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_student_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="103" width="122" height="20" uuid="ed4ac514-cce8-410c-8bef-07f7621b4625"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="260" width="122" height="20" uuid="b90d620a-5d69-48a0-956d-9b05a6fe2fc2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_period}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="148" width="122" height="20" uuid="80999259-492f-4997-9961-92b6f75ba33a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_college_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="226" width="122" height="20" uuid="dda9d667-7b87-4121-916e-371bed5b969a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_adhar_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="188" width="122" height="20" uuid="e81a8bda-3351-4417-82f2-734fd1a4e118"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_bonafide_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="293" width="122" height="20" uuid="8c9b77b0-9f96-4fb3-b709-1926c84ba9ca"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_route}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="59" width="116" height="20" uuid="7c49e5c2-d0e4-4f92-9204-ee33bbf44833"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_apply_pass_photo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="20" width="107" height="20" uuid="c958c699-6dfb-4600-a2f0-79fbb14e799d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pass ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="59" width="107" height="20" uuid="015f6f35-e76a-4cad-a9aa-eee4a1e059d5"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="103" width="107" height="20" uuid="99a5fa7c-fd99-4ff3-b6ff-f566877aea75"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="260" width="107" height="20" uuid="bfa9d9c2-edcd-4eb5-8367-4655debc0c26"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time Period]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="148" width="107" height="20" uuid="a864a489-eb2c-4851-8bb1-ddb2da78d8d1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[College Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="226" width="107" height="20" uuid="610c8b8a-840c-42d0-b99a-7412da7c2712"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adhar Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="188" width="107" height="20" uuid="e17aaf89-22f1-49cd-ac4f-34be14f682c8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bonafide Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="293" width="107" height="20" uuid="f3e1950b-7517-4569-a80e-534572f12d03"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="20" width="116" height="20" uuid="a7df5d67-fb5e-45d1-b59a-4e2b9d5c7346"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Photo]]></text>
+			</staticText>
+			<elementGroup/>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="51" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>
